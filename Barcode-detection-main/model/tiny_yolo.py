@@ -93,7 +93,7 @@ class TinyYolo:
         return history
     
     def predict(self, image):
-        #print('hi')
+      
         class_names = Settings.class_names
         model = self._gen_model()
         img_raw = Image.open(image)
@@ -104,7 +104,7 @@ class TinyYolo:
         img = tf.expand_dims(img, 0)
         img = transform_images(img, 416)
         a,b = model(img)
-        print(model(img))
+        #print(model(img))
         '''
         for i in range(nums[0]):
             logging.info(
